@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- utility css file -->
+    <link rel="stylesheet" href="css/utility.css">
+    <!-- style css file -->
+    <link rel = "stylesheet" href = "css/style.css">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- navbar section -->
+    <nav class = "navbar">
+      <div class = "container">
+        <div class = "brand-and-toggler">
+          <a href = "index.html" class = "navbar-brand">ajdin</a>
+          <button type = "button" class = "navbar-toggler" id = "navbar-toggler">
+            <span>
+              <i class = "fas fa-bars"></i>
+            </span>
+          </button>
+        </div>
+
+        <div class = "navbar-collapse">
+          <ul class = "navbar-nav">
+            <li class = "nav-item nav-active">
+              <a href = "index.html" class = "nav-link">home</a>
+            </li>
+            <li class = "nav-item">
+              <a href = "about.html" class = "nav-link">about</a>
+            </li>
+            <li class = "nav-item">
+              <a href = "projects.html" class = "nav-link">projects</a>
+            </li>
+            <li class = "nav-item">
+              <a href = "credentials.html" class = "nav-link">credentials</a>
+            </li>
+            <li class = "nav-item">
+              <a href = "contact.html" class = "nav-link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar section -->
+
+
+
+    <!-- home page -->
+    <section class = "home container">
+      <div class = "row">
+        <div class = "row-left">
+          <h3 data-translate="greeting">hello!</h3>
+          <h1 data-translate="intro">i'm <span>ajdin buljko</span></h1>
+          <h2 data-translate="description">I’m a computer science student with a strong interest in Computer Networks, Programming, Machine Learning, AI, and Data Science.</h2>
+          <div class = "home-pg-btn">
+            <div class = "social-links">
+              <a href = "https://www.linkedin.com/in/ajdin-buljko-68ba69336/" target="_blank"><i class = "fab fa-linkedin"></i></a>
+              <a href = "https://github.com/ABuljko" target="_blank"><i class = "fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class = "row-right">
+          <div class = "img-border">
+            <div class = "img-container">
+              <img src = "assets/my-photo.jpg" alt = "my photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of home page -->
+    
+
+     <!-- Footer -->
+     <footer class="footer container">
+      <div class="row">
+
+        <div class="col">
+          <h3 class="footer-title" data-translate="links">Links</h3>
+          <div class="footer-links">
+            <a href="index.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="home">Home</span></a>
+            <a href="about.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="about">About</span></a>
+            <a href="projects.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="projects">Projects</span></a>
+            <a href="contact.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="contact">Contact</span></a>
+          </div>
+        </div>
+
+        <div class = "col">
+          <h3 class = "footer-title">recent projects</h3>
+          <div class = "footer-links">
+            <a href = "expense_tracker.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              expense tracker app
+            </a>
+            <a href = "object_detection.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              object detection yolo
+            </a>
+            <a href = "qr_app.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              QR code app
+            </a>
+          </div>
+        </div>
+
+        <div class = "col">
+          <h3 class = "footer-title" data-translate="contactMe">contact me</h3>
+
+          <div>
+            <span>
+              <i class = "fas fa-envelope"></i>
+            </span>
+            <span class = "text">ajdinbuljko0@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <p class="text" data-translate="copyright">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+
+    <!-- custom js file -->
+    <script src="js/script.js"></script>
+    <script src="js/languages.js"></script>
+  </body>
+</html>

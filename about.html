@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="brand-and-toggler">
+          <a href="index.html" class="navbar-brand">ajdin</a>
+          <button type="button" class="navbar-toggler" id="navbar-toggler">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+        </div>
+
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link" data-translate="home">Home</a></li>
+            <li class="nav-item nav-active"><a href="about.html" class="nav-link" data-translate="about">About</a></li>
+            <li class="nav-item"><a href="projects.html" class="nav-link" data-translate="projects">Projects</a></li>
+            <li class="nav-item"><a href="credentials.html" class="nav-link" data-translate="credentials">Credentials</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar Section -->
+
+    <!-- About Page -->
+    <section class="about container">
+      <div class="title">
+        <h2 data-translate="aboutTitle">About</h2>
+        <div>
+          <h2 data-translate="aboutMe">About Me</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-left">
+          <img src="assets/my-photo.jpg" alt="about photo">
+        </div>
+
+        <div class="row-right">
+          <p class="text" data-translate="aboutText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium numquam alias soluta incidunt? Similique assumenda, voluptatibus saepe quae iusto ratione dicta consectetur nesciunt perspiciatis!
+          </p>
+          <div class="about-content">
+            <ul>
+              <li class="text">
+                <span data-translate="name">Name:</span>
+                <span>Ajdin Buljko</span>
+              </li>
+              <li class="text">
+                <span data-translate="dob">Date of Birth:</span>
+                <span>July 27, 2003</span>
+              </li>
+              <li class="text">
+                <span data-translate="email">Email:</span>
+                <span>ajdinbuljko0@gmail.com</span>
+              </li>
+              <li class="text">
+                <span data-translate="country">Country of Residence:</span>
+                <span>Germany</span>
+              </li>
+              <li class="text">
+                <span data-translate="city">City of Residence:</span>
+                <span>Berlin</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" class="btn" data-translate="downloadCV1">Download English CV</button>
+          <button type="button" class="btn" data-translate="downloadCV2">Download German CV</button>
+        </div>
+      </div>
+    </section>
+    <!-- End of About Page -->
+
+     <!-- Footer -->
+     <footer class="footer container">
+      <div class="row">
+
+        <div class="col">
+          <h3 class="footer-title" data-translate="links">Links</h3>
+          <div class="footer-links">
+            <a href="index.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="home">Home</span></a>
+            <a href="about.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="about">About</span></a>
+            <a href="projects.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="projects">Projects</span></a>
+            <a href="contact.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="contact">Contact</span></a>
+          </div>
+        </div>
+
+        <div class = "col">
+          <h3 class = "footer-title">recent projects</h3>
+          <div class = "footer-links">
+            <a href = "expense_tracker.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              expense tracker app
+            </a>
+            <a href = "object_detection.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              object detection yolo
+            </a>
+            <a href = "qr_app.html" class = "text">
+              <i class = "fas fa-long-arrow-alt-right"></i>
+              QR code app
+            </a>
+          </div>
+        </div>
+
+        <div class = "col">
+          <h3 class = "footer-title">contact me</h3>
+
+          <div>
+            <span>
+              <i class = "fas fa-envelope"></i>
+            </span>
+            <span class = "text">ajdinbuljko0@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <p class="text">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Custom JS File -->
+    <script src="js/script.js"></script>
+    <script src="js/languages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Add Font Awesome for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .project-details {
+            text-align: center; /* Center-align text */
+        }
+        .project-details p.text {
+            margin: 0 auto;
+            font-size: 1.4rem;
+            text-align: left;
+            max-width: 80%;
+        }
+        .project-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center; /* Center-align items vertically */
+            justify-content: center; /* Center-align items horizontally */
+            gap: 20px;
+        }
+        .project-row p.text {
+            flex: 1;
+            max-width: 45%;
+            text-align: left;
+        }
+        .project-details p.text-description {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        .project-row img {
+            flex: 1;
+            max-width: 50%;
+        }
+        .project-row .text {
+            flex: 1;
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Navigation links */
+        .navigation-link-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .navigation-link {
+            font-size: 1.4em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            transition: all 0.3s ease; /* Added transition for smooth effect */
+        }
+
+        .navigation-link:hover {
+            color: var(--indigo);
+        }
+
+        .navigation-link.left {
+            width: 45%; /* Adjust left link width */
+        }
+
+        .navigation-link.right {
+            width: 45%; /* Adjust right link width */
+            justify-content: flex-end; /* Push the right link to the end */
+        }
+
+        .arrow {
+            margin: 0 10px;
+        }
+
+        /* Optional: smooth underline effect */
+        .navigation-link:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-row img, .project-row .text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .project-details p.text {
+                font-size: 1.2rem;
+                max-width: 90%;
+            }
+
+            .btn {
+                width: 90%;
+                font-size: 1em;
+            }
+
+            .navigation-link-container {
+                flex-direction: row; /* Ensure links stay in the same row */
+                justify-content: space-between; /* Maintain spacing between links */
+                gap: 0; /* Remove extra gap */
+            }
+
+            .navigation-link {
+                width: 45%; /* Keep consistent width for both links */
+            }
+
+            .footer .row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer .col {
+                margin-bottom: 20px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 5px 0;
+            }
+            .project-row:first-of-type img:first-of-type {
+                display: none; /* Hide only the first image in the first project-row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-details p.text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+
+            .footer .footer-title {
+                font-size: 1.2rem;
+            }
+
+            .footer .text {
+                font-size: 0.9rem;
+            }
+
+            .navigation-link.right {
+                text-align: center;
+            }
+
+            .navigation-link.right span.arrow {
+                display: block;
+            }
+
+            .navigation-link.right::after {
+                content: "Next\A Project"; /* Add a line break between "Next" and "Project" */
+                white-space: pre; /* Ensure the line break is rendered */
+            }
+        }
+    </style>
+</head>
+<body>
+        
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand-and-toggler">
+                <a href="index.html" class="navbar-brand">ajdin</a>
+                <button type="button" class="navbar-toggler" id="navbar-toggler">
+                    <span>
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item nav-active">
+                        <a href="projects.html" class="nav-link">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="credentials.html" class="nav-link">credentials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar section -->
+    
+    <section class="projects container">
+        <div class="title">
+            <h2>Object Detector</h2>
+            <div>
+                <h2>Object Detection Yolo</h2>
+            </div>
+        </div>
+        <div class="project-details">
+            <p class="text-description">This project began as a school assignment aimed at exploring 
+                real-time object detection using AI, specifically the YOLO (You Only Look Once) model. 
+                The task was to apply YOLOv8 to a recorded video while walking through the SRH Berlin 
+                building and analyze its performance. 
+                <br><br>
+                At first, it seemed like a straightforward 
+                experiment—run the model, detect objects, and document the results. However, as I progressed, 
+                I realized there was much more to uncover. Beyond just recognizing objects, the project 
+                highlighted the model’s strengths and weaknesses in real-world conditions, such as varying 
+                lighting and object occlusion. It also raised important questions about AI’s role in 
+                surveillance and privacy. What started as a simple technical exercise turned into a deeper 
+                exploration of object detection, model comparisons, and ethical considerations, making this 
+                project both an insightful and good learning experience.
+            </p>
+            <br><br>
+            <div class="project-row">
+                <img src="assets/project-img-1.jpg" alt="Object Detection Yolo" style="max-width: 40%;">
+                <div class="text">
+                    <h2>Features:</h2>
+
+<h3>Real-Time Object Detection:</h3>
+<ul>
+    <li><strong>Efficient Video Processing:</strong> Uses YOLOv8 to detect objects in video frames with high speed and accuracy.</li>
+    <li><strong>Annotated Output:</strong> Saves processed videos with clear bounding boxes and labels for easy interpretation.</li>
+</ul>
+
+<h3>High Performance & Accuracy:</h3>
+<ul>
+    <li><strong>Fast Detection:</strong> Runs at up to 35 FPS, ensuring smooth real-time object tracking.</li>
+    <li><strong>Reliable Recognition:</strong> Identifies multiple objects with confidence levels reaching up to 95%.</li>
+</ul>
+
+<h3>Scalable & Versatile:</h3>
+<ul>
+    <li><strong>Optimized for Various Hardware:</strong> Works efficiently on both CPU and GPU for flexible deployment.</li>
+    <li><strong>Adaptable to Environments:</strong> Can be fine-tuned for improved accuracy in specific indoor locations.</li>
+</ul>
+
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="project-row">
+                <div class="text">
+                    <h2>Technologies Used:</h2>
+
+                    <ul>
+                        <li><strong>YOLOv8:</strong> A state-of-the-art deep learning model for real-time object detection, used to process video frames and detect objects.</li>
+                        <li><strong>Python:</strong> The primary programming language used for implementing the object detection pipeline.</li>
+                        <li><strong>Ultralytics YOLO Library:</strong> A Python library that provides easy-to-use implementations of YOLO models, including YOLOv8.</li>
+                        <li><strong>OpenCV:</strong> A computer vision library used for video processing, drawing bounding boxes, and handling frame-by-frame object detection.</li>
+                        <li><strong>PyTorch & Torchvision:</strong> Deep learning frameworks used for running the YOLOv8 model efficiently on both CPU and GPU.</li>
+                        <li><strong>NumPy:</strong> A numerical computing library used for handling arrays and optimizing performance in processing video frames.</li></ul>
+                </div>
+                <img src="assets/yolo.png" alt="Object Detection Yolo" style="max-width: 40%;">
+            </div>
+            <br><br><br><br>
+            <a href="https://github.com/ABuljko/Data-Visualization-CSV-NY" target="_blank" class="btn">GitHub Repository</a>
+
+            <!-- Navigation links for Next and Previous Project -->
+            <div class="navigation-link-container">
+                <a href="previous-project.html" class="navigation-link left">
+                    <span class="arrow"><i class="fas fa-arrow-left"></i></span>Previous<br>Project
+                </a>
+                <a href="next-project.html" class="navigation-link right">
+                    Next<br>Project <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="row">
+  
+          <div class="col">
+            <h3 class="footer-title" data-translate="links">Links</h3>
+            <div class="footer-links">
+              <a href="index.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="home">Home</span></a>
+              <a href="about.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="about">About</span></a>
+              <a href="projects.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="projects">Projects</span></a>
+              <a href="contact.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="contact">Contact</span></a>
+            </div>
+          </div>
+  
+          <div class = "col">
+            <h3 class = "footer-title">recent projects</h3>
+            <div class = "footer-links">
+              <a href = "expense_tracker.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                expense tracker app
+              </a>
+              <a href = "object_detection.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                object detection yolo
+              </a>
+              <a href = "qr_app.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                QR code app
+              </a>
+            </div>
+          </div>
+  
+          <div class = "col">
+            <h3 class = "footer-title" data-translate="contactMe">contact me</h3>
+  
+            <div>
+              <span>
+                <i class = "fas fa-envelope"></i>
+              </span>
+              <span class = "text">ajdinbuljko0@gmail.com</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-text">
+          <p class="text" data-translate="copyright">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
+        </div>
+      </footer>
+      <!-- End of Footer -->  
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

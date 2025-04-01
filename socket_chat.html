@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Add Font Awesome for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .project-details {
+            text-align: left;
+        }
+        .project-details p.text {
+            margin: 0 auto;
+            font-size: 1.4rem;
+            text-align: left;
+            max-width: 80%;
+        }
+        .project-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .project-row p.text {
+            flex: 1;
+            max-width: 45%;
+            text-align: left;
+        }
+        .project-details p.text-description {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        .project-row img {
+            flex: 1;
+            max-width: 50%;
+        }
+        .project-row .text {
+            flex: 1;
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Navigation links */
+        .navigation-link-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .navigation-link {
+            font-size: 1.4em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            transition: all 0.3s ease; /* Added transition for smooth effect */
+        }
+
+        .navigation-link:hover {
+            color: var(--indigo);
+        }
+
+        .navigation-link.left {
+            width: 45%; /* Adjust left link width */
+        }
+
+        .navigation-link.right {
+            width: 45%; /* Adjust right link width */
+            justify-content: flex-end; /* Push the right link to the end */
+        }
+
+        .arrow {
+            margin: 0 10px;
+        }
+
+        /* Optional: smooth underline effect */
+        .navigation-link:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-row img, .project-row .text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .project-details p.text {
+                font-size: 1.2rem;
+                max-width: 90%;
+            }
+
+            .btn {
+                width: 90%;
+                font-size: 1em;
+            }
+
+            .navigation-link-container {
+                flex-direction: row; /* Ensure links stay in the same row */
+                justify-content: space-between; /* Maintain spacing between links */
+                gap: 0; /* Remove extra gap */
+            }
+
+            .navigation-link {
+                width: 45%; /* Keep consistent width for both links */
+            }
+
+            .footer .row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer .col {
+                margin-bottom: 20px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-details p.text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+
+            .footer .footer-title {
+                font-size: 1.2rem;
+            }
+
+            .footer .text {
+                font-size: 0.9rem;
+            }
+
+            .navigation-link.right {
+                text-align: center;
+            }
+
+            .navigation-link.right span.arrow {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+        
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand-and-toggler">
+                <a href="index.html" class="navbar-brand">ajdin</a>
+                <button type="button" class="navbar-toggler" id="navbar-toggler">
+                    <span>
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item nav-active">
+                        <a href="projects.html" class="nav-link">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="credentials.html" class="nav-link">credentials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar section -->
+    
+    <section class="projects container">
+        <div class="title">
+            <h2>Socket Chat</h2>
+            <div>
+                <h2>Socket Chat App</h2>
+            </div>
+        </div>
+        <div class="project-details">
+            <p class="text-description">This project started as a school assignment, where the task 
+                was to visualize public data from two CSV files (Comma Separated Values) in a 
+                meaningful way. Initially, I was focused on creating some basic visualizations that 
+                would help users understand trends and patterns in the data. It seemed like a 
+                straightforward assignment to practice using standard web technologies.
+                <br><br>
+                However, as I dove into the project, I realized I wanted to go beyond the basics. 
+                Why stop at 2 datasets?  I tried my hand at 3. Instead of just producing static 
+                charts, I created an interactive web application that would allow users to truly 
+                engage with the data. I decided to push again and incorporate dynamic maps to show 
+                how data is distributed across New York, and I used D3.js to build charts that users 
+                could interact with and filter in real-time. 
+                <br><br>
+                What started as a simple school project 
+                quickly grew into something much more. I ended up creating a tool that not only 
+                visualizes data but also helped me to discover some insights on Chicago for my own. 
+                This project became a way for me to bring data to life, transforming an interesting 
+                assignment into a powerful, enjoyable experience that I’m proud of.
+            </p>
+            <br><br>
+            <div class="project-row">
+                <img src="assets/project-img-3.jpg" alt="Expense Tracker App">
+                <div class="text">
+                    <h2>Features:</h2>
+
+                    <h3>Interactive Map Visualization:</h3>
+                    <ul>
+                        <li><strong>CSV Data on Map:</strong> Display public data from Chicago on a map, allowing users to visualize and explore the geographical distribution of the data.</li>
+                        <li><strong>Dynamic Interaction:</strong> Users can interact with the map to view detailed information about specific data points.</li>
+                    </ul>
+
+                    <h3>D3.js Charts:</h3>
+                    <ul>
+                        <li><strong>Dynamic Charts:</strong> Generate dynamic, interactive charts using D3.js to represent various datasets, providing clear and insightful visualizations.</li>
+                        <li><strong>Data Filtering:</strong> Users can filter data directly on the charts to explore specific subsets of information.</li>
+                    </ul>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="project-row">
+                <div class="text">
+                    <h2>Technologies Used:</h2>
+
+                    <ul>
+                        <li><strong>D3.js:</strong> A powerful JavaScript library used for creating dynamic and interactive data visualizations in the form of charts and graphs.</li>
+                        <li><strong>Leaflet.js:</strong> A JavaScript library used for creating mobile-friendly interactive maps, enabling the visualization of CSV data on a map.</li>
+                        <li><strong>CSV & JSON:</strong> Data is stored and managed in CSV and JSON formats, ensuring compatibility and ease of use for data visualization.</li>
+                    </ul>
+                </div>
+                <img src="assets/logo.png" alt="Analytics Visualization" style="max-width: 45%;">
+            </div>
+            <br><br><br><br>
+            <a href="https://github.com/ABuljko/Data-Visualization-CSV-NY" target="_blank" class="btn">GitHub Repository</a>
+
+            <!-- Navigation links for Next and Previous Project -->
+            <div class="navigation-link-container">
+                <a href="sudoku_app.html" class="navigation-link left">
+                    <span class="arrow"><i class="fas fa-arrow-left"></i></span>Previous<br>Project
+                </a>
+                <a href="qr_app.html" class="navigation-link right">
+                    Next<br>Project <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="row">
+  
+          <div class="col">
+            <h3 class="footer-title" data-translate="links">Links</h3>
+            <div class="footer-links">
+              <a href="index.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="home">Home</span></a>
+              <a href="about.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="about">About</span></a>
+              <a href="projects.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="projects">Projects</span></a>
+              <a href="contact.html" class="text"><i class="fas fa-long-arrow-alt-right"></i> <span data-translate="contact">Contact</span></a>
+            </div>
+          </div>
+  
+          <div class = "col">
+            <h3 class = "footer-title">recent projects</h3>
+            <div class = "footer-links">
+              <a href = "expense_tracker.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                expense tracker app
+              </a>
+              <a href = "object_detection.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                object detection yolo
+              </a>
+              <a href = "qr_app.html" class = "text">
+                <i class = "fas fa-long-arrow-alt-right"></i>
+                QR code app
+              </a>
+            </div>
+          </div>
+  
+          <div class = "col">
+            <h3 class = "footer-title" data-translate="contactMe">contact me</h3>
+  
+            <div>
+              <span>
+                <i class = "fas fa-envelope"></i>
+              </span>
+              <span class = "text">ajdinbuljko0@gmail.com</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-text">
+          <p class="text" data-translate="copyright">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
+        </div>
+      </footer>
+      <!-- End of Footer -->  
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
