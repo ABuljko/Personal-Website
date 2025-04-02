@@ -214,56 +214,67 @@
             </div>
         </div>
         <div class="project-details">
-            <p class="text-description">This project started as a school assignment, where the task 
-                was to visualize public data from two CSV files (Comma Separated Values) in a 
-                meaningful way. Initially, I was focused on creating some basic visualizations that 
-                would help users understand trends and patterns in the data. It seemed like a 
-                straightforward assignment to practice using standard web technologies.
+            <p class="text-description">This project began as a school assignment to develop a socket-based 
+                chatroom application with real-time messaging, user authentication, and friend request 
+                management. Initially, the objective was to create a basic messaging system, but as 
+                development progressed, it evolved into a fully functional multi-user chat platform. The 
+                application utilizes Python for backend logic, SQLite for storing user data, and Tkinter for 
+                an intuitive graphical user interface. By leveraging socket programming, users can send and 
+                receive messages instantly while managing their contacts through friend requests.
                 <br><br>
-                However, as I dove into the project, I realized I wanted to go beyond the basics. 
-                Why stop at 2 datasets?  I tried my hand at 3. Instead of just producing static 
-                charts, I created an interactive web application that would allow users to truly 
-                engage with the data. I decided to push again and incorporate dynamic maps to show 
-                how data is distributed across New York, and I used D3.js to build charts that users 
-                could interact with and filter in real-time. 
+                A major challenge was ensuring seamless real-time communication while maintaining smooth 
+                performance. By integrating multi-threading, the application allows multiple users to chat 
+                simultaneously without lag. The SQLite database ensures efficient storage of user credentials, 
+                messages, and friend lists, providing reliable data persistence. The friend request system 
+                enables users to connect and manage their relationships, enhancing the chat experience beyond 
+                simple messaging.
                 <br><br>
-                What started as a simple school project 
-                quickly grew into something much more. I ended up creating a tool that not only 
-                visualizes data but also helped me to discover some insights on Chicago for my own. 
-                This project became a way for me to bring data to life, transforming an interesting 
-                assignment into a powerful, enjoyable experience that I’m proud of.
+                What started as a straightforward assignment quickly grew into a dynamic and interactive 
+                application. This project provided valuable hands-on experience in networking, database 
+                management, and user interface design. It transformed a classroom exercise into a rewarding 
+                challenge, showcasing the power of real-time communication and expanding our technical 
+                knowledge in software development.
             </p>
             <br><br>
             <div class="project-row">
-                <img src="assets/project-img-3.jpg" alt="Expense Tracker App">
-                <div class="text">
+                <div class="text" style="flex: 1; max-width: 50%;">
                     <h2>Features:</h2>
-
-                    <h3>Interactive Map Visualization:</h3>
+                    <h3>User Management:</h3>
                     <ul>
-                        <li><strong>CSV Data on Map:</strong> Display public data from Chicago on a map, allowing users to visualize and explore the geographical distribution of the data.</li>
-                        <li><strong>Dynamic Interaction:</strong> Users can interact with the map to view detailed information about specific data points.</li>
+                        <li><strong>Secure Authentication:</strong> Sign-up and login functionality with credentials stored safely in an SQLite database.</li>
+                        <li><strong>Friend Requests:</strong> Send, accept, or reject friend requests and manage a personal friends list.</li>
                     </ul>
-
-                    <h3>D3.js Charts:</h3>
+                    <h3>Real-Time Communication:</h3>
                     <ul>
-                        <li><strong>Dynamic Charts:</strong> Generate dynamic, interactive charts using D3.js to represent various datasets, providing clear and insightful visualizations.</li>
-                        <li><strong>Data Filtering:</strong> Users can filter data directly on the charts to explore specific subsets of information.</li>
-                    </ul>
+<h3>Real-Time Communication:</h3>
+<ul>
+    <li><strong>Instant Messaging:</strong> Users can send and receive messages in real time using socket programming.</li>
+    <li><strong>Multi-User Support:</strong> Allows multiple clients to connect to the server simultaneously for seamless interactions.</li>
+</ul>
+
+<h3>Interface & Data Handling:</h3>
+<ul>
+    <li><strong>User-Friendly GUI:</strong> Built with Tkinter for a responsive and interactive chat experience.</li>
+    <li><strong>Reliable Storage:</strong> SQLite database stores user accounts, messages, and friend relationships for data persistence and security.</li>
+</ul>
+
                 </div>
+                <img src="assets/project-img-5.jpg" alt="Socket Chat App">
             </div>
             <br><br><br><br>
             <div class="project-row">
                 <div class="text">
                     <h2>Technologies Used:</h2>
 
-                    <ul>
-                        <li><strong>D3.js:</strong> A powerful JavaScript library used for creating dynamic and interactive data visualizations in the form of charts and graphs.</li>
-                        <li><strong>Leaflet.js:</strong> A JavaScript library used for creating mobile-friendly interactive maps, enabling the visualization of CSV data on a map.</li>
-                        <li><strong>CSV & JSON:</strong> Data is stored and managed in CSV and JSON formats, ensuring compatibility and ease of use for data visualization.</li>
-                    </ul>
+<ul>
+    <li><strong>Python:</strong> The core programming language used for backend logic and socket communication.</li>
+    <li><strong>SQLite:</strong> A lightweight database management system used to store user data, messages, and friend requests.</li>
+    <li><strong>Tkinter:</strong> A GUI library used to build a responsive and user-friendly chat interface.</li>
+    <li><strong>Sockets:</strong> A networking library used to enable real-time communication between the client and server.</li>
+</ul>
+
                 </div>
-                <img src="assets/logo.png" alt="Analytics Visualization" style="max-width: 45%;">
+                <img src="assets/python.png" alt="Python">
             </div>
             <br><br><br><br>
             <a href="https://github.com/ABuljko/Data-Visualization-CSV-NY" target="_blank" class="btn">GitHub Repository</a>

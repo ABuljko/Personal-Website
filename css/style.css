@@ -371,7 +371,10 @@
   
   .modal-content {
     background-color: var(--nero);
-    margin: 15% auto;
+    margin: auto; /* Center horizontally and vertically */
+    position: relative; /* Ensure proper positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
     padding: 20px;
     border-radius: 10px;
     width: 50%;
@@ -388,7 +391,10 @@
 @media screen and (max-width: 768px) {
     .modal-content {
         width: 90%; /* Adjust width for smaller screens */
-        margin: 20% auto; /* Center the modal with more margin */
+        margin: auto; /* Center horizontally */
+        position: relative; /* Ensure proper positioning */
+        top: 40%; /* Move 10% higher (from 50% to 40%) */
+        transform: translateY(-40%); /* Adjust for vertical centering */
         padding: 15px; /* Reduce padding */
         font-size: 0.9rem; /* Adjust font size */
     }
