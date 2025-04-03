@@ -94,6 +94,69 @@
         .navigation-link:hover {
             transform: translateY(-5px); /* Slight lift on hover */
         }
+
+        /* New Section for Three Images in a Row */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Adjust space between images */
+            margin-bottom: 30px; /* Add margin for spacing */
+        }
+
+        .image-row img {
+            width: 32%; /* Adjust width of each image */
+            height: auto;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .image-row img {
+                width: 90%; /* Shrink the images slightly */
+                margin: 0 auto; /* Center the images */
+            }
+
+            .image-row img:last-child {
+                display: none; /* Hide the scanner image */
+            }
+
+            .project-details p.text-description,
+            .project-row .text,
+            .columns .column h3,
+            .columns .column ul {
+                text-align: center;
+            }
+
+            .project-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .columns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navigation-link-container {
+                flex-direction: row; /* Ensure links stay in the same row */
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .navigation-link {
+                width: 45%; /* Adjust width to fit in the row */
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -134,59 +197,77 @@
     
     <section class="projects container">
         <div class="title">
-            <h2>Sudoku</h2>
+            <h2>QR Code</h2>
             <div>
-                <h2>Sudoku App</h2>
+                <h2>QR Code App</h2>
             </div>
         </div>
         <div class="project-details">
             <p class="text-description">This project started as a school assignment to build a simple Sudoku 
-              game, but it quickly evolved into something more. The original goal was to create a functional 
-              app where users could play Sudoku, but I wanted to go beyond just the basics. I decided to 
-              incorporate dynamic puzzle generation and add a feature that highlights mistakes, so users 
-              would get instant feedback as they played. I also realized that adding customization options 
-              like different themes would make the experience more personal and enjoyable.
-              <br><br>
-              I expanded the project to include a "How to Play" page to guide new players and make learning 
-              the rules easier. Then, I pushed it further by introducing visual feedback that changes 
-              depending on whether the input is correct or incorrect, helping users track their progress. 
-              To keep the game fresh and engaging, I built a system that randomly generates puzzles with 
-              unique solutions every time.
-              <br><br>
-              With Flutter's flexibility and third-party packages for puzzle generation, I was able to create an 
-              app that’s both fun and educational.
+                game, but it quickly evolved into something more. The original goal was to create a functional 
+                app where users could play Sudoku, but I wanted to go beyond just the basics. I decided to 
+                incorporate dynamic puzzle generation and add a feature that highlights mistakes, so users 
+                would get instant feedback as they played. I also realized that adding customization options 
+                like different themes would make the experience more personal and enjoyable.
+                <br><br>
+                I expanded the project to include a "How to Play" page to guide new players and make learning 
+                the rules easier. Then, I pushed it further by introducing visual feedback that changes 
+                depending on whether the input is correct or incorrect, helping users track their progress. 
+                To keep the game fresh and engaging, I built a system that randomly generates puzzles with 
+                unique solutions every time.
+                <br><br>
+                With Flutter's flexibility and third-party packages for puzzle generation, I was able to create an 
+                app that’s both fun and educational.
             </p>
+            <br><br><br>
+            <!-- New Section for Three Images in a Row -->
+            <div class="image-row">
+                <img src="assets/sudoku/how_to.png" alt="Image 1">
+                <img src="assets/sudoku/num.png" alt="Image 2">
+                <img src="assets/sudoku/home.png" alt="Image 3">
+            </div>
+            
             <br><br>
-            <div class="project-row">
-                <img src="assets/project-img-2.jpg" alt="Expense Tracker App">
-                <div class="text">
-                    <h2>Features:</h2>
-
-                    <h3>Interactive Map Visualization:</h3>
-                    <ul>
-                        <li><strong>CSV Data on Map:</strong> Display public data from Chicago on a map, allowing users to visualize and explore the geographical distribution of the data.</li>
-                        <li><strong>Dynamic Interaction:</strong> Users can interact with the map to view detailed information about specific data points.</li>
-                    </ul>
-
-                    <h3>D3.js Charts:</h3>
-                    <ul>
-                        <li><strong>Dynamic Charts:</strong> Generate dynamic, interactive charts using D3.js to represent various datasets, providing clear and insightful visualizations.</li>
-                        <li><strong>Data Filtering:</strong> Users can filter data directly on the charts to explore specific subsets of information.</li>
-                    </ul>
+            <div class="project-row" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="text" style="text-align: center; margin-bottom: 20px;">
+                    <h2>Features</h2>
+                </div>
+                
+                <div class="columns" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; max-width: 1200px;">
+                    <div class="column" style="flex: 1; padding: 0 20px;">
+                        <h3>Sudoku Gameplay:</h3>
+                        <ul>
+                            <li><strong>9x9 Sudoku Grid:</strong> A traditional Sudoku grid divided into 3x3 subgrids, offering a familiar and structured gameplay experience.</li>
+                            <li><strong>Dynamic Puzzle Generation:</strong> Automatically generates solvable and unique puzzles for a fresh challenge every time.</li>
+                            <li><strong>Input Validation:</strong> Ensures no duplicate numbers are entered in rows, columns, or subgrids to maintain puzzle integrity.</li>
+                            <li><strong>Visual Feedback:</strong> Incorrect entries are highlighted in red, while completed puzzles are marked in green to give users clear feedback.</li>
+                        </ul>
+                    </div>
+            
+                    <div class="column" style="flex: 1; padding: 0 20px;">
+                        <h3>Customization and Guidance:</h3>
+                        <ul>
+                            <li><strong>Multiple Themes:</strong> Choose from various themes such as Normal, Dark, and Vintage to personalize the app’s appearance.</li>
+                            <li><strong>How to Play:</strong> A step-by-step tutorial with images to guide new users through the basics of Sudoku gameplay.</li>
+                            <li><strong>Settings Page:</strong> Customize game settings, including theme switching and other preferences, to tailor the app to your needs.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <br><br><br><br>
             <div class="project-row">
                 <div class="text">
                     <h2>Technologies Used:</h2>
-
+                
                     <ul>
-                        <li><strong>D3.js:</strong> A powerful JavaScript library used for creating dynamic and interactive data visualizations in the form of charts and graphs.</li>
-                        <li><strong>Leaflet.js:</strong> A JavaScript library used for creating mobile-friendly interactive maps, enabling the visualization of CSV data on a map.</li>
-                        <li><strong>CSV & JSON:</strong> Data is stored and managed in CSV and JSON formats, ensuring compatibility and ease of use for data visualization.</li>
-                    </ul>
+                        <li><strong>Flutter & Dart:</strong> Cross-platform compatibility ensures the app works seamlessly on both iOS and Android devices.</li>
+    <li><strong>Sudoku Solver & Generator:</strong> Utilizes the `sudoku_solver_generator` library for automatic puzzle generation and solution validation.</li>
+    <li><strong>State Management:</strong> Uses the `provider` package to manage state efficiently, ensuring smooth gameplay and interactions.</li>
+    </ul>
                 </div>
-                <img src="assets/flutter.png" alt="Analytics Visualization">
+                
+                <img src="assets/flutter.png">
             </div>
             <br><br><br><br>
             <a href="https://github.com/ABuljko/Sudoku-App" target="_blank" class="btn">GitHub Repository</a>
@@ -194,7 +275,7 @@
             <!-- Navigation links for Next and Previous Project -->
             <div class="navigation-link-container">
                 <a href="object_detection.html" class="navigation-link left">
-                    <span class="arrow"><i class="fas fa-arrow-left"></i></span> Previous<br>Project
+                    <span class="arrow"><i class="fas fa-arrow-left"></i></span>Previous<br>Project
                 </a>
                 <a href="data_visualization.html" class="navigation-link right">
                     Next<br>Project <span class="arrow"><i class="fas fa-arrow-right"></i></span>
@@ -221,10 +302,10 @@
           <div class = "col">
             <h3 class = "footer-title">recent projects</h3>
             <div class = "footer-links">
-              <a href = "expense_tracker.html" class = "text">
-                <i class = "fas fa-long-arrow-alt-right"></i>
-                expense tracker app
-              </a>
+                <a href = "arduino.html" class = "text">
+                    <i class = "fas fa-long-arrow-alt-right"></i>
+                    Car Control Web UI
+                  </a>
               <a href = "object_detection.html" class = "text">
                 <i class = "fas fa-long-arrow-alt-right"></i>
                 object detection yolo

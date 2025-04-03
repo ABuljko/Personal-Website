@@ -430,6 +430,21 @@
     .modal-content p, .modal-content h2, .modal-content h3 {
         text-align: center; /* Ensure all headings and paragraphs are centered */
     }
+
+    .project-row .text {
+        max-width: 100%;
+        text-align: center; /* Center align text for better readability */
+    }
+    .project-row ul {
+        padding-left: 0; /* Remove left padding for lists */
+        list-style-position: inside; /* Ensure list items are aligned properly */
+    }
+    .project-row h2, .project-row h3 {
+        text-align: center; /* Center align headings */
+    }
+    .project-row img {
+        display: none; /* Hide images in phone view */
+    }
 }
 
 /* Vertical tablet view adjustments */
