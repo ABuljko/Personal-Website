@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker App</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Car Control Web UI</title>
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/style.css">
     
@@ -214,43 +215,50 @@
             </div>
         </div>
         <div class="project-details">
-            <p class="text-description">This project started as a school assignment, where the task 
-                was to visualize public data from two CSV files (Comma Separated Values) in a 
-                meaningful way. Initially, I was focused on creating some basic visualizations that 
-                would help users understand trends and patterns in the data. It seemed like a 
-                straightforward assignment to practice using standard web technologies.
-                <br><br>
-                However, as I dove into the project, I realized I wanted to go beyond the basics. 
-                Why stop at 2 datasets?  I tried my hand at 3. Instead of just producing static 
-                charts, I created an interactive web application that would allow users to truly 
-                engage with the data. I decided to push again and incorporate dynamic maps to show 
-                how data is distributed across New York, and I used D3.js to build charts that users 
-                could interact with and filter in real-time. 
-                <br><br>
-                What started as a simple school project 
-                quickly grew into something much more. I ended up creating a tool that not only 
-                visualizes data but also helped me to discover some insights on Chicago for my own. 
-                This project became a way for me to bring data to life, transforming an interesting 
-                assignment into a powerful, enjoyable experience that I’m proud of.
+            <p class="text-description">This project focused on developing a web-based control system for a 
+                robotic car, with an Arduino microcontroller managing its movement. The goal was to create an 
+                intuitive interface where users could send commands, such as moving forward, turning, stopping, 
+                or switching modes directly from a browser. By integrating web technologies with embedded 
+                systems, the project explored real-time remote control applications in an accessible and 
+                interactive way.
+
+                While the concept seemed simple at first, the implementation introduced several challenges. 
+                Establishing smooth and responsive communication between the web interface and the Arduino 
+                required handling networking protocols, optimizing latency, and ensuring precise motor control. 
+                Fine-tuning the Arduino’s logic and motor driver integration was crucial to achieving accurate 
+                movements. Beyond the technical aspects, this project became a valuable hands-on learning 
+                experience in IoT, real-time systems, and the intersection of software and hardware, turning a 
+                basic experiment into an insightful exploration of web-controlled robotics.
             </p>
             <a href="https://abuljko.github.io/CarControl-WebUI/" target="_blank" class="btn">Check It Out</a>
             <br><br>
             <div class="project-row">
-                <img src="assets/project-img-3.jpg" alt="Expense Tracker App">
+                <img src="assets/project-img-6.jpg" alt="Expense Tracker App">
                 <div class="text">
                     <h2>Features:</h2>
 
-                    <h3>Interactive Map Visualization:</h3>
-                    <ul>
-                        <li><strong>CSV Data on Map:</strong> Display public data from Chicago on a map, allowing users to visualize and explore the geographical distribution of the data.</li>
-                        <li><strong>Dynamic Interaction:</strong> Users can interact with the map to view detailed information about specific data points.</li>
-                    </ul>
+                    <h3>Web-Based Car Control Panel</h3>
+<ul>
+    <li><strong>Intuitive Interface:</strong> Simple HTML-based control panel for seamless car navigation.</li>
+    <li><strong>Real-Time Commands:</strong> Uses fetch API to send movement requests instantly.</li>
+</ul>
 
-                    <h3>D3.js Charts:</h3>
-                    <ul>
-                        <li><strong>Dynamic Charts:</strong> Generate dynamic, interactive charts using D3.js to represent various datasets, providing clear and insightful visualizations.</li>
-                        <li><strong>Data Filtering:</strong> Users can filter data directly on the charts to explore specific subsets of information.</li>
-                    </ul>
+<h3>Arduino/ESP-Based Command Processing</h3>
+<ul>
+    <li><strong>Wi-Fi Enabled Control:</strong> Uses ESP8266/ESP32 to handle web-based commands over HTTP.</li>
+    <li><strong>Responsive Navigation:</strong> Processes <code>/forward</code>, <code>/left</code>, <code>/right</code>, <code>/stop</code>, and <code>/mode</code> requests in real time.</li>
+    <li><strong>Flexible Operation Modes:</strong> Supports different driving modes like manual and autonomous.</li>
+    <li><strong>Seamless Communication:</strong> Possible UART/Serial connection for data exchange with other components.</li>
+</ul>
+
+<h3>Motor Control & Hardware Interaction</h3>
+<ul>
+    <li><strong>Precise Movement Control:</strong> GPIO pins manage motor driver (L298N or similar) for accurate navigation.</li>
+    <li><strong>Multiple Direction Handling:</strong> Supports forward, left, right, and stop commands effectively.</li>
+    <li><strong>Expandable Hardware Compatibility:</strong> Can integrate with sensors for advanced automation.</li>
+    <li><strong>Smooth & Efficient Driving:</strong> Optimized motor control logic ensures stable movement.</li>
+</ul>
+
                 </div>
             </div>
             <br><br><br><br>
@@ -259,10 +267,11 @@
                     <h2>Technologies Used:</h2>
 
                     <ul>
-                        <li><strong>D3.js:</strong> A powerful JavaScript library used for creating dynamic and interactive data visualizations in the form of charts and graphs.</li>
-                        <li><strong>Leaflet.js:</strong> A JavaScript library used for creating mobile-friendly interactive maps, enabling the visualization of CSV data on a map.</li>
-                        <li><strong>CSV & JSON:</strong> Data is stored and managed in CSV and JSON formats, ensuring compatibility and ease of use for data visualization.</li>
-                    </ul>
+                        <li><strong>Arduino (C++)</strong>: A microcontroller platform used for processing commands and controlling hardware components.</li>
+                        <li><strong>HTML, CSS, JavaScript</strong>: Web technologies used for creating a user-friendly car control panel interface.</li>
+                        <li><strong>Fetch API</strong>: A JavaScript feature used to send HTTP requests to control the car’s movements.</li>
+                        <li><strong>Embedded Web Server</strong>: A server running on the Arduino, enabling communication between the web interface and the hardware.</li>
+                    </ul>                    
                 </div>
                 <img src="assets/arduino.png" alt="Analytics Visualization" style="max-width: 30%;">
             </div>
@@ -271,7 +280,7 @@
 
             <!-- Navigation links for Next and Previous Project -->
             <div class="navigation-link-container">
-                <a href="object_detection.html" class="navigation-link left">
+                <a href="socket_chat.html" class="navigation-link left">
                     <span class="arrow"><i class="fas fa-arrow-left"></i></span>Previous<br>Project
                 </a>
                 <a href="projects.html" class="navigation-link right">

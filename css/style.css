@@ -443,7 +443,7 @@
         text-align: center; /* Center align headings */
     }
     .project-row img {
-        display: none; /* Hide images in phone view */
+        display: block; /* Ensure images are visible */
     }
 }
 
