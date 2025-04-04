@@ -193,5 +193,13 @@
 
     <!-- custom js file -->
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        ScrollReveal().reveal('.title', { origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.text', { origin: 'bottom', distance: '30px', duration: 1000 });
+        ScrollReveal().reveal('.item', { origin: 'bottom', distance: '50px', duration: 1000, interval: 200 });
+        ScrollReveal().reveal('.footer', { origin: 'bottom', distance: '50px', duration: 1000, delay: 300 });
+      });
+    </script>
   </body>
 </html>

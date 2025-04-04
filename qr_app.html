@@ -356,5 +356,14 @@
       <!-- End of Footer -->  
     
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        ScrollReveal().reveal('.title', { origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.project-details', { origin: 'bottom', distance: '30px', duration: 1000 });
+        ScrollReveal().reveal('.image-row img', { origin: 'left', distance: '50px', duration: 1000, interval: 200 });
+        ScrollReveal().reveal('.project-row .text', { origin: 'right', distance: '50px', duration: 1000, interval: 200 });
+        ScrollReveal().reveal('.footer', { origin: 'bottom', distance: '50px', duration: 1000, delay: 300 });
+      });
+    </script>
 </body>
 </html>

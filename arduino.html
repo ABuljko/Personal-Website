@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- ScrollReveal CDN -->
     <script src="https://unpkg.com/scrollreveal"></script>  
-    
+
     <style>
         .project-details {
             text-align: left;
@@ -211,7 +211,7 @@
     
     <section class="projects container">
         <div class="title">
-            <h2>Arduino</h2>
+            <h2>Arduino Car Control</h2>
             <div>
                 <h2>Car Control Web UI</h2>
             </div>
@@ -344,5 +344,14 @@
       <!-- End of Footer -->  
     
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        ScrollReveal().reveal('.title', { origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('.project-details', { origin: 'bottom', distance: '30px', duration: 1000 });
+        ScrollReveal().reveal('.project-row img', { origin: 'left', distance: '50px', duration: 1000, interval: 200 });
+        ScrollReveal().reveal('.project-row .text', { origin: 'right', distance: '50px', duration: 1000, interval: 200 });
+        ScrollReveal().reveal('.footer', { origin: 'bottom', distance: '50px', duration: 1000, delay: 300 });
+      });
+    </script>
 </body>
 </html>
