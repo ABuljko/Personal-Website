@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>  
   </head>
   <body>
     
@@ -51,13 +53,17 @@
 
       <div class="row">
         <div class="row-left">
-          <img src="assets/my-photo.jpg" alt="about photo">
+          <div class="about-photo"> 
+            <img src="assets/my-photo.jpg" alt="about photo">
+          </div>
         </div>
 
         <div class="row-right">
-            <p class="text" data-translate="aboutText"></p>
-              I am Ajdin Buljko, a computer science student, and technology enthusiast. I specialize in creating modern, responsive websites and applications, combining creativity with technical expertise to deliver exceptional user experiences.
-            </p>
+            <div class="about-p">
+              <p class="text" data-translate="aboutText"></p>
+            I am Ajdin Buljko, a computer science student, and technology enthusiast. I specialize in creating modern, responsive websites and applications, combining creativity with technical expertise to deliver exceptional user experiences.
+          </p>
+            </div>
           <div class="about-content">
             <ul>
               <li class="text">
@@ -83,8 +89,10 @@
             </ul>
           </div>
 
-          <button type="button" class="btn" data-translate="downloadCV1">Download English CV</button>
+          <div class="about-btn">
+            <button type="button" class="btn" data-translate="downloadCV1">Download English CV</button>
           <button type="button" class="btn" data-translate="downloadCV2">Download German CV</button>
+          </div>
         </div>
       </div>
     </section>
@@ -123,7 +131,7 @@
         </div>
 
         <div class = "col">
-          <h3 class = "footer-title">contact me</h3>
+          <h3 class = "footer-title" data-translate="contactMe">contact me</h3>
 
           <div>
             <span>
@@ -135,7 +143,7 @@
       </div>
 
       <div class="footer-text">
-        <p class="text">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
+        <p class="text" data-translate="copyright">Copyright &copy; 2025 by Ajdin Buljko | All Rights Reserved</p>
       </div>
     </footer>
     <!-- End of Footer -->

@@ -69,6 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ScrollReveal Animations
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal({
+            reset: true,
+            distance: "80px",
+            duration: 2000,
+            delay: 200
+        });
+
+        ScrollReveal().reveal(".row-right,.about-photo,.projects-text,.row-left,.text,.column", { origin: "top" });
+        ScrollReveal().reveal(".footer-text,.social-links,.title,.row,.col,.text-description,.navigation-link-container", { origin: "bottom" });
+        ScrollReveal().reveal(".about-content,.about-p,.about-btn", { origin: "left" });
+    } else {
+        console.warn("ScrollReveal is not defined. Please ensure it is included in your project.");
+    }
 });
 
 
