@@ -341,11 +341,18 @@
     <script src="js/script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        ScrollReveal().reveal('.title', { origin: 'top', distance: '50px', duration: 1000 });
-        ScrollReveal().reveal('.project-details', { origin: 'bottom', distance: '30px', duration: 1000 });
-        ScrollReveal().reveal('.image-row img', { origin: 'left', distance: '50px', duration: 1000, interval: 200 });
-        ScrollReveal().reveal('.project-row .text', { origin: 'right', distance: '50px', duration: 1000, interval: 200 });
-        ScrollReveal().reveal('.footer', { origin: 'bottom', distance: '50px', duration: 1000, delay: 300 });
+        ScrollReveal({
+          reset: false, // Disable reset to make effects appear only once
+          distance: '50px',
+          duration: 1000,
+          delay: 300
+        });
+
+        ScrollReveal().reveal('.title', { origin: 'top' });
+        ScrollReveal().reveal('.project-details', { origin: 'bottom' });
+        ScrollReveal().reveal('.image-row img', { origin: 'left', interval: 200 });
+        ScrollReveal().reveal('.project-row .text', { origin: 'right', interval: 200 });
+        ScrollReveal().reveal('.footer', { origin: 'bottom' });
       });
     </script>
 </body>

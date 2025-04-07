@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ScrollReveal Animations
     if (typeof ScrollReveal !== 'undefined') {
         ScrollReveal({
-            reset: true,
+            reset: false, // Disable reset to make effects appear only once
             distance: "80px",
             duration: 2000,
             delay: 200

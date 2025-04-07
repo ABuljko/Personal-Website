@@ -153,11 +153,17 @@
     <script src="js/languages.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        ScrollReveal().reveal('.title', { origin: 'top', distance: '50px', duration: 1000 });
-        ScrollReveal().reveal('.about-photo', { origin: 'left', distance: '50px', duration: 1000 });
-        ScrollReveal().reveal('.row-right', { origin: 'right', distance: '50px', duration: 1000 });
-        ScrollReveal().reveal('.about-btn', { origin: 'bottom', distance: '30px', duration: 1000, delay: 200 });
-        ScrollReveal().reveal('.footer', { origin: 'bottom', distance: '50px', duration: 1000, delay: 300 });
+        ScrollReveal({
+          reset: false, // Disable reset to make effects appear only once
+          distance: '50px',
+          duration: 1000,
+          delay: 300
+        });
+
+        ScrollReveal().reveal('.title', { origin: 'top' });
+        ScrollReveal().reveal('.row-left', { origin: 'left' });
+        ScrollReveal().reveal('.row-right', { origin: 'right' });
+        ScrollReveal().reveal('.footer', { origin: 'bottom' });
       });
     </script>
   </body>
