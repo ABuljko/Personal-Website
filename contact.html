@@ -74,7 +74,7 @@
             <span><i class = "fas fa-envelope-open"></i></span>
             <h3>
               <span class = "text" data-translate="mailMe">mail me</span> <br>
-              ajdinbuljko0@gmail.com
+              buljkoajdin@outlook.com
             </h3>
           </div>
 
@@ -87,7 +87,7 @@
         </div>
 
         <div class="col-right">
-          <form class="contact-form" action="https://formspree.io/f/xblglalj" method="POST" onsubmit="return validateEmail()">
+          <form class="contact-form" action="https://formspree.io/f/xpwpogve" method="POST" onsubmit="return validateEmail()">
               <div class="form-group">
                   <input type="text" name="name" placeholder="Your Name" required data-translate="contactFormPlaceholder.name">
                   <input type="email" id="email" name="email" placeholder="Your Email" required data-translate="contactFormPlaceholder.email">
@@ -145,7 +145,7 @@
             <span>
               <i class = "fas fa-envelope"></i>
             </span>
-            <span class = "text">ajdinbuljko0@gmail.com</span>
+            <span class = "text">buljkoajdin@outlook.com</span>
           </div>
         </div>
       </div>
@@ -159,8 +159,22 @@
 
     <!-- custom js file -->
     <script src="js/script.js"></script>
-    <script src="js/languages.js"></script>
     <script>
+      // Function to validate email format
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // Example usage in form submission
+      function onFormSubmit(event) {
+        const emailInput = document.getElementById('email'); // Replace 'email' with the actual ID of your email input field
+        if (!validateEmail(emailInput.value)) {
+          event.preventDefault(); // Prevent form submission
+          alert('Please enter a valid email address.');
+        }
+      }
+
       document.addEventListener('DOMContentLoaded', () => {
         ScrollReveal({
           reset: false, // Disable reset to make effects appear only once
